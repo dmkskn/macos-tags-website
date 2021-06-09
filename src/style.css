@@ -1,0 +1,353 @@
+.PAGE {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.HIDDEN:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+
+@media (min-width: 694px) {
+    .HEADLINE {
+        right: 0;
+    }
+}
+
+
+.IGNORED {
+    display: contents;
+}
+
+
+.CODE {
+    font-family: Chalkboard, 'Comic Sans MS', monospace;
+}
+
+
+.BLOCKS {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+
+@media (min-width: 694px) {
+    .BLOCKS {
+        flex-direction: row;
+
+
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+}
+
+
+.BLOCK {
+    box-sizing: border-box;
+    position: relative;
+
+    margin: 0;
+    padding: 0;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    border-style: solid; 
+    border-width: max(1vw, 10px);
+    border-collapse: separate;
+    border-color: black;
+
+    min-height: calc(100vh / 2);
+    min-width: 250px;
+    
+    width: 100%;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    color: rgb(29, 29, 29);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+
+    font-family: ui-serif, Georgia, 'Times New Roman', Times, serif;
+    font-size: max(28px, 2.5vw);
+    font-weight: 200;    
+
+    padding: 1.5em;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+@media (min-width: 694px) {
+    .BLOCK {
+        min-height: calc(100vh / 3);
+        padding-bottom: 0.5em;
+        padding-top: 0.5em;
+    }
+}
+
+.BLOCK__CONTENT {
+    pointer-events: none;
+}
+
+.BLOCK--SMALL {
+    width: 100vw;
+}
+
+.BLOCK--LARGE {
+    width: 100vw;
+}
+
+.BLOCK--FULL {
+    width: 100vw;
+}
+
+@media (min-width: 694px) {
+    .BLOCK--SMALL {
+        width: 40vw;
+    }
+    .BLOCK--LARGE {
+        width: 60vw;
+    }
+}
+
+.BLOCK--LINK {
+    border-width: max(2vw, 20px);
+}
+
+/* COLORS */
+
+.BLOCK--BLUE {
+    background-color: rgb(10, 122, 255);
+    border-top-color: rgb(141, 192, 255);
+    border-left-color: rgb(141, 192, 255);
+    border-right-color: rgb(6, 63, 133);
+    border-bottom-color: rgb(6, 63, 133);
+}
+
+.BLOCK--LINK.BLOCK--BLUE:active {
+    border-bottom-color: rgb(141, 192, 255);
+    border-right-color: rgb(141, 192, 255);
+    border-left-color: rgb(6, 63, 133);
+    border-top-color: rgb(6, 63, 133);
+}
+
+
+.BLOCK--BROWN {
+    background-color: rgb(162, 132, 94);
+    border-top-color: rgb(248, 206, 151);
+    border-left-color: rgb(248, 206, 151);
+    border-right-color: rgb(78, 64, 43);
+    border-bottom-color: rgb(78, 64, 43);
+}
+
+
+.BLOCK--LINK.BLOCK--BROWN:active {
+    border-bottom-color: rgb(248, 206, 151);
+    border-right-color: rgb(248, 206, 151);
+    border-left-color: rgb(78, 64, 43);
+    border-top-color: rgb(78, 64, 43);
+}
+
+
+.BLOCK--CYAN {
+    background-color: rgb(85, 190, 240);
+    border-top-color: rgb(171, 224, 248);
+    border-left-color: rgb(171, 224, 248);
+    border-right-color: rgb(27, 90, 119);
+    border-bottom-color: rgb(27, 90, 119);
+}
+
+.BLOCK--LINK.BLOCK--CYAN:active {
+    border-bottom-color: rgb(171, 224, 248);
+    border-right-color: rgb(171, 224, 248);
+    border-left-color: rgb(27, 90, 119);
+    border-top-color: rgb(27, 90, 119);
+}
+
+
+.BLOCK--GRAY {
+    background-color: rgb(142, 142, 147);
+    border-top-color: rgb(204, 204, 207);
+    border-left-color: rgb(204, 204, 207);
+    border-right-color: rgb(70, 70, 73);
+    border-bottom-color: rgb(70, 70, 73);
+}
+
+
+.BLOCK--LINK.BLOCK--GRAY:active {    
+    border-bottom-color: rgb(204, 204, 207);
+    border-right-color: rgb(204, 204, 207);
+    border-left-color: rgb(70, 70, 73);
+    border-top-color: rgb(70, 70, 73);
+}
+
+
+.BLOCK--GREEN {
+    background-color: rgb(40, 205, 65);
+    border-top-color: rgb(120, 247, 139);
+    border-left-color: rgb(120, 247, 139);
+    border-right-color: rgb(21, 114, 35);
+    border-bottom-color: rgb(21, 114, 35);
+}
+
+.BLOCK--LINK.BLOCK--GREEN:active {
+    border-bottom-color: rgb(120, 247, 139);
+    border-right-color: rgb(120, 247, 139);
+    border-left-color: rgb(21, 114, 35);
+    border-top-color: rgb(21, 114, 35);
+}
+
+
+.BLOCK--INDIGO {
+    background-color: rgb(88, 86, 214);
+    border-top-color: rgb(165, 164, 248);
+    border-left-color: rgb(165, 164, 248);
+    border-right-color: rgb(31, 30, 94);
+    border-bottom-color: rgb(31, 30, 94);
+}
+
+
+.BLOCK--LINK.BLOCK--INDIGO:active {
+    border-bottom-color: rgb(165, 164, 248);
+    border-right-color: rgb(165, 164, 248);
+    border-left-color: rgb(31, 30, 94);
+    border-top-color: rgb(31, 30, 94);
+}
+
+
+.BLOCK--MINT {
+    background-color: rgb(32, 198, 189);
+    border-top-color: rgb(57, 245, 235);
+    border-left-color: rgb(57, 245, 235);
+    border-right-color: rgb(18, 105, 101);
+    border-bottom-color: rgb(18, 105, 101);
+}
+
+
+.BLOCK--LINK.BLOCK--MINT:active {
+    border-bottom-color: rgb(57, 245, 235);
+    border-right-color: rgb(57, 245, 235);
+    border-left-color: rgb(18, 105, 101);
+    border-top-color: rgb(18, 105, 101);
+}
+
+
+.BLOCK--ORANGE {
+    background-color: rgb(255, 149, 0);
+    border-top-color: rgb(255, 189, 97);
+    border-left-color: rgb(255, 189, 97);
+    border-right-color: rgb(114, 66, 0);
+    border-bottom-color: rgb(114, 66, 0);
+}
+
+
+.BLOCK--LINK.BLOCK--ORANGE:active {
+    border-bottom-color: rgb(255, 189, 97);
+    border-right-color: rgb(255, 189, 97);
+    border-left-color: rgb(114, 66, 0);
+    border-top-color: rgb(114, 66, 0);
+}
+
+
+.BLOCK--PINK {
+    background-color: rgb(255, 45, 85);
+    border-top-color: rgb(255, 138, 159);
+    border-left-color: rgb(255, 138, 159);
+    border-right-color: rgb(158, 27, 51);
+    border-bottom-color: rgb(158, 27, 51);
+}
+
+.BLOCK--LINK.BLOCK--PINK:active {    
+    border-bottom-color: rgb(255, 138, 159);
+    border-right-color: rgb(255, 138, 159);
+    border-left-color: rgb(158, 27, 51);
+    border-top-color: rgb(158, 27, 51);
+}
+
+
+.BLOCK--PURPLE {
+    background-color: rgb(175, 82, 222);
+    border-top-color: rgb(196, 124, 231);
+    border-left-color: rgb(196, 124, 231);
+    border-right-color: rgb(109, 51, 138);
+    border-bottom-color: rgb(109, 51, 138);
+}
+
+
+.BLOCK--LINK.BLOCK--PURPLE:active {
+    border-bottom-color: rgb(196, 124, 231);
+    border-right-color: rgb(196, 124, 231);
+    border-left-color: rgb(109, 51, 138);
+    border-top-color: rgb(109, 51, 138);
+}
+
+
+.BLOCK--RED {
+    background-color: rgb(255, 59, 48);
+    border-top-color: rgb(253, 121, 114);
+    border-left-color: rgb(253, 121, 114);
+    border-right-color: rgb(151, 33, 27);
+    border-bottom-color: rgb(151, 33, 27);
+}
+
+
+.BLOCK--LINK.BLOCK--RED:active {
+    border-bottom-color: rgb(253, 121, 114);
+    border-right-color: rgb(253, 121, 114);
+    border-left-color: rgb(151, 33, 27);
+    border-top-color: rgb(151, 33, 27);
+}
+
+
+.BLOCK--TEAL {
+    background-color: rgb(89, 173, 196);
+    border-top-color: rgb(145, 201, 216);
+    border-left-color: rgb(145, 201, 216);
+    border-right-color: rgb(45, 107, 124);
+    border-bottom-color: rgb(45, 107, 124);
+}
+
+.BLOCK--LINK.BLOCK--TEAL:active {
+    border-right-color: rgb(145, 201, 216);
+    border-bottom-color: rgb(145, 201, 216);
+    border-left-color: rgb(45, 107, 124);
+    border-top-color: rgb(45, 107, 124);
+}
+
+
+.BLOCK--YELLOW {
+    background-color: rgb(255, 204, 0);
+    border-top-color: rgb(255, 232, 140);
+    border-left-color: rgb(255, 232, 140);
+    border-right-color: rgb(160, 128, 0);
+    border-bottom-color: rgb(160, 128, 0);
+}
+
+.BLOCK--LINK.BLOCK--YELLOW:active {    
+    border-bottom-color: rgb(255, 232, 140);
+    border-right-color: rgb(255, 232, 140);
+    border-top-color: rgb(160, 128, 0);
+    border-left-color: rgb(160, 128, 0);    
+}

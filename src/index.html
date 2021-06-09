@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="PAGE" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Dima Koskin">
+
+    <meta name="description" content="A python library to manipulate tags on macOS">
+    <meta name="keywords" content="macOS, tags, python">
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <meta property="og:title" content="MACOS-TAGS">
+    <meta property="og:image" content="https://macos-tags.dmkskn.com/favicon.png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+    <meta property="og:description" content="A python library to manipulate tags on macOS">
+    <meta property="og:locale" content="en">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="MACOS-TAGS">
+    <meta name="twitter:description" content="A python library to manipulate tags on macOS">
+    <meta name="twitter:image" content="https://macos-tags.dmkskn.com/favicon.png">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>MACOS-TAGS</title>
+</head>
+
+<body class="BLOCKS">
+    <h1 class="BLOCK BLOCK--SMALL BLOCK--RED">MACOS-TAGS</h1>
+
+    <section class="BLOCK BLOCK--LARGE BLOCK--BLUE">
+        <h2 class="HIDDEN">Installation</h2>
+        <code class="BLOCK__CONTENT CODE">pip install macos-tags</code>
+    </section>
+
+    <section class="BLOCK BLOCK--FULL BLOCK--YELLOW">
+        <h2 class="HIDDEN">Description</h2>
+        <p class="BLOCK__CONTENT">A python library to manipulate tags on macOS</p>
+    </section>
+
+    <section class="IGNORED">
+        <h2 class="HIDDEN">Links</h2>
+        <ul class="IGNORED">
+            <li class="IGNORED">
+                <a 
+                    class="BLOCK BLOCK--LINK BLOCK--LARGE BLOCK--GREEN"
+                    href="https://github.com/dmkskn/macos-tags" 
+                    target="_blank" rel="noopener noreferrer">
+                    Github
+                </a>
+            </li>
+            <li class="IGNORED">
+                <a 
+                    class="BLOCK BLOCK--LINK BLOCK--SMALL BLOCK--ORANGE" 
+                    href="https://dmkskn.com"
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                    Made by Dima Koskin
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <script>
+        const colors = [
+            'BLOCK--BLUE',
+            'BLOCK--BROWN',
+            'BLOCK--CYAN',
+            'BLOCK--GRAY',
+            'BLOCK--GREEN',
+            'BLOCK--INDIGO',
+            'BLOCK--MINT',
+            'BLOCK--ORANGE',
+            'BLOCK--PINK',
+            'BLOCK--PURPLE',
+            'BLOCK--RED',
+            'BLOCK--TEAL',
+            'BLOCK--YELLOW',
+        ]
+
+        function updateColor(event) {
+            const color = colors.find(color => event.target.classList.contains(color))
+            event.target.classList.remove(color)
+            event.target.classList.add(colors[(colors.indexOf(color) + 1) % colors.length])
+        }
+
+        [...document.getElementsByClassName('BLOCK')].forEach(block => {
+            block.addEventListener('mouseenter', updateColor);
+        });
+    </script>
+
+</body>
+
+
+</html>
