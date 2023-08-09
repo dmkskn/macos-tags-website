@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;0,300;0,400;1,200;1,300&family=IBM+Plex+Serif:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap');
+
 .PAGE {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -30,7 +32,8 @@
 
 
 .CODE {
-    font-family: Chalkboard, 'Comic Sans MS', monospace;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 400;
 }
 
 
@@ -87,10 +90,11 @@
     color: rgb(29, 29, 29);
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 
-    font-family: ui-serif, Georgia, 'Times New Roman', Times, serif;
+    font-family: 'IBM Plex Serif' Georgia, 'Times New Roman', Times, serif;
     font-size: max(28px, 2.5vw);
     font-weight: 200;    
 
+    letter-spacing: 0.042em;
     padding: 1.5em;
 
     user-select: none;
